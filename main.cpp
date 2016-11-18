@@ -8,7 +8,7 @@
 #include "Familiares.h"
 #include "Amantes.h"
 #include "Bloqueados.h"
-
+#include <fstream>
 
 using namespace std;
 
@@ -93,7 +93,7 @@ int main(){
 			case 2:{
 				for (int i = 0; i < contactos.size(); ++i)
 				{
-					cout<< i <<"-"<<contactos[i]<<endl;
+					cout<< i <<"-"<<contactos.at(i)->toString()<<endl;
 				}
 				int numeropedido;
 				cout<<"Ingrese el contacto que quiere borrar";
@@ -102,53 +102,53 @@ int main(){
 				break;
 			}
 			case 3:{
-				cout<<"Amigos"<<endl;
+				cout<<"Amigos:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Amigos*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
-				cout<<"Pareja"<<endl;
+				cout<<"Pareja:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Pareja*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
-				cout<<"Trabajo"<<endl;
+				cout<<"Trabajo:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Trabajo*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
-				cout<<"Clase"<<endl;
+				cout<<"Clase:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Clase*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
-				cout<<"Familiares"<<endl;
+				cout<<"Familiares:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Familiares*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
-				cout<<"Amantes"<<endl;
+				cout<<"Amantes:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Amantes*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
-				cout<<"Bloqueados"<<endl;
+				cout<<"Bloqueados:"<<endl;
 				for (int i = 0; i < contactos.size(); ++i)
 				{
 					if(dynamic_cast <Bloqueados*>(contactos.at(i))!=NULL){
-						cout<< i<<"-"<<contactos[i];
+						cout<< i<<"-"<<contactos.at(i)->toString()<<endl;
 					}
 				}
 				cout<<endl;
@@ -157,5 +157,58 @@ int main(){
 			}
 		}//Fin Switch 
 	}while(opcion>=0 && opcion <=3);//Fin do while
+	ofstream file;
+	file.open("Contactos.txt");
+	file<<"Amigos:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Amigos*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<"Pareja:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Pareja*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<"Trabajo:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Trabajo*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<"Clase:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Clase*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<"Familiares:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Familiares*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<"Amantes:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Amantes*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<"Bloqueados:"<<endl;
+	for (int i = 0; i < contactos.size(); ++i)
+	{
+		if(dynamic_cast <Bloqueados*>(contactos.at(i))!=NULL){
+			file<< i<<"-"<<contactos.at(i)->toString()<<endl;
+		}
+	}
+	file<<endl;
+	file.close();
 	return 0;
 }

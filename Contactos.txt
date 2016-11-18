@@ -1,0 +1,9 @@
+Amigos:
+0-Nombre: ola Numero: 98 Correo: okmokm
+Pareja:
+Trabajo:
+Clase:
+Familiares:
+Amantes:
+Bloqueados:
+

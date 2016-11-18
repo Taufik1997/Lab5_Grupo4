@@ -19,6 +19,7 @@ public:
 	string getEmail();
 	void setNumero(int);
 	int getNumero();
+	string toString();
 };
 
 #endif

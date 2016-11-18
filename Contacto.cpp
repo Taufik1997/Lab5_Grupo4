@@ -1,5 +1,7 @@
 #include "Contacto.h"
 #include <string>
+#include <sstream>
+using std::stringstream;
 using std::string;
 
 Contacto::Contacto(){
@@ -7,7 +9,7 @@ Contacto::Contacto(){
 }
 
 Contacto::~Contacto() {
-	
+
 }
 
 Contacto::Contacto(string nombre, string email, int numero){
@@ -38,4 +40,10 @@ void Contacto::setNumero(int num){
 
 int Contacto::getNumero(){
   return numero;
+}
+
+string Contacto::toString(){
+	stringstream ss;
+	ss<<"Nombre: "<<nombre<<" Numero: "<<numero<<" Correo: "<<email;
+	return ss.str();
 }
