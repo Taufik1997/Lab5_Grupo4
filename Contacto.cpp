@@ -6,6 +6,10 @@ Contacto::Contacto(){
 
 }
 
+Contacto::~Contacto() {
+	
+}
+
 Contacto::Contacto(string nombre, string email, int numero){
 	this->nombre = nombre;
 	this->email = email;

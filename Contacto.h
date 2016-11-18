@@ -12,6 +12,7 @@ private:
 public:
 	Contacto(string,string,int);
 	Contacto();
+	virtual ~Contacto();
 	void setNombre(string);
 	string getNombre();
 	void setEmail(string);
