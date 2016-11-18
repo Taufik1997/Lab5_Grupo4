@@ -3,8 +3,13 @@
 #include "Trabajo.h"
 
 using std::stringstream;
+using std::string;
 
-Trabajo::Trabajo(){
+Trabajo::Trabajo() : Contacto(){
+    
+}
+
+Trabajo::Trabajo(string nombre,string email, int numero, string departamento) : Contacto(nombre,email,numero),departamento(departamento){
     
 }
 
@@ -12,12 +17,12 @@ void Trabajo::setDepartamento(string dep){
   departamento = dep;
 }
 
-int Trabajo::getDepartamento(){
+string Trabajo::getDepartamento(){
   return departamento;
 }
 
-string departamento::toString(){
+string Trabajo::toString(){
 	stringstream ss;
 	ss<<departamento;
-	return ss.c_str();
+	return ss.str();
 }

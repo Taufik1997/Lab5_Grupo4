@@ -3,13 +3,16 @@
 #include <string>
 #include "Contacto.h"
 
+using std::string;
+
 class Trabajo : public Contacto {
     private:
     	string departamento;
     public:
         Trabajo();
+        Trabajo(string,string,int,string);
         void setDepartamento(string);
-		int getDepartamento();
+		string getDepartamento();
 		string toString();
 };
 

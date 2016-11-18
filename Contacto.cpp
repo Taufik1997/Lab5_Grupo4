@@ -1,15 +1,22 @@
 #include "Contacto.h"
 #include <string>
+using std::string;
 
 Contacto::Contacto(){
 
 }
 
-void Contacto::setNombre(String nombre2){
+Contacto::Contacto(string nombre, string email, int numero){
+	this->nombre = nombre;
+	this->email = email;
+	this->numero = numero;
+}
+
+void Contacto::setNombre(string nombre2){
   nombre = nombre2;
 }
 
-int Contacto::getNombre(){
+string Contacto::getNombre(){
   return nombre;
 }
 
@@ -17,7 +24,7 @@ void Contacto::setEmail(string email2){
   email = email2;
 }
 
-int Contacto::getEmail(){
+string Contacto::getEmail(){
   return email;
 }
 

@@ -2,17 +2,20 @@
 #define CONTACTO_H 
 #include <string>
 
+using std::string;
+
 class Contacto{
 private:
 	string nombre;
 	string email;
 	int numero;
 public:
+	Contacto(string,string,int);
 	Contacto();
 	void setNombre(string);
-	int getNombre();
+	string getNombre();
 	void setEmail(string);
-	int getEmail();
+	string getEmail();
 	void setNumero(int);
 	int getNumero();
 };

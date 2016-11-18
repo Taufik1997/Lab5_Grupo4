@@ -3,13 +3,16 @@
 #include <string>
 #include "Contacto.h"
 
+using std::string;
+
 class Pareja : public Contacto {
     private:
     	string fecha;
     public:
         Pareja();
+        Pareja(string,string,int,string);
         void setFecha(string);
-		int getFecha();
+		string getFecha();
 		string toString();
 };
 
