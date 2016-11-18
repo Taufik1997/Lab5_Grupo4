@@ -8,13 +8,13 @@ private:
 	string email;
 	int numero;
 public:
-	Operacion();
+	Contacto();
 	void setNombre(string);
 	int getNombre();
 	void setEmail(string);
 	int getEmail();
 	void setNumero(int);
-	int getEmail();
+	int getNumero();
 };
 
 #endif
