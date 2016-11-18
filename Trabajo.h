@@ -12,3 +12,5 @@ class Trabajo : public Contacto {
 		int getDepartamento();
 		string toString();
 };
+
+#endif

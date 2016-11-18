@@ -12,3 +12,5 @@ class Pareja : public Contacto {
 		int getFecha();
 		string toString();
 };
+
+#endif

@@ -12,3 +12,5 @@ class Clase : public Contacto {
 		int getClase();
 		string toString();
 };
+
+#endif

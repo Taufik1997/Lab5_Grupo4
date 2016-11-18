@@ -12,3 +12,5 @@ class Amigos : public Contacto {
 		int getNivel();
 		string toString();
 };
+
+#endif

@@ -12,3 +12,5 @@ class Familiares : public Contacto {
 		int getRelacion();
 		string toString();
 };
+
+#endif
